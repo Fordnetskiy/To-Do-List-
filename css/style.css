@@ -1,0 +1,258 @@
+:root {
+  --color-bg: #fffff7;
+  --color-bg-alt: #fbfbeb;
+  --color-text: #a3a398;
+  --color-text-muted: #a1e779;
+  --color-shadow: #a3a398;
+  --color-button-bg: #c9c9bc;
+  --color-button-hover-bg: #e2e2d4;
+  --color-button-active-bg: #a1e779;
+  --color-delete-hover-bg: rgb(228, 125, 106);
+  --color-delete-hover-text: #fff;
+}
+
+.theme-light {
+  --color-bg: #fffff7;
+  --color-bg-alt: #fbfbeb;
+  --color-text: #a3a398;
+  --color-text-muted: #a1e779;
+  --color-shadow: #a3a398;
+  --color-button-bg: #c9c9bc;
+  --color-button-hover-bg: #e2e2d4;
+  --color-button-active-bg: #a1e779;
+  --color-delete-hover-bg: rgb(228, 125, 106);
+  --color-delete-hover-text: #fff;
+}
+
+.theme-dark {
+  --color-bg: #121212;
+  --color-bg-alt: #1e1e1e;
+  --color-text: #e0e0e0;
+  --color-text-muted: #80c783;
+  --color-shadow: #707070;
+  --color-button-bg: #444444;
+  --color-button-hover-bg: #666666;
+  --color-button-active-bg: #80c783;
+  --color-delete-hover-bg: #c75b4f;
+  --color-delete-hover-text: #fff;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+h1{
+  margin: 0;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li + li{
+  margin-top: 15px;
+}
+button{
+  border: none;
+  cursor: pointer;
+}
+body{
+  font-family: 'Arial', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHMwZGZ6c2U3M2QxbWZtanE1aXpubDU4NXByYXVmcXU4Z3N2eXphMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QMHoU66sBXqqLqYvGO/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper, .wrapper-2{
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  background-color: var(--color-bg-alt);
+  padding: 20px 40px;
+  border-radius: 18px;
+  box-shadow: 9px 9px 0px -4px var(--color-shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.title{
+  font-size: 46px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+.text-block{
+  display: flex;
+  height: 45px;
+  outline: 1px solid var(--color-shadow);
+  box-shadow: 7px 8px 0px -4px var(--color-shadow);
+  margin-bottom: 25px;
+  transition: .2s ease;
+}
+.text-block:hover .add{
+  border-radius: 0 16px 16px 0;
+}
+.text-block:hover{
+  border-radius: 16px;
+}
+.text-input{
+  width: 100%;
+  padding: 8px 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-button-bg);
+  border: none;
+  transition: .4s ease;
+}
+.text-block:hover .text-input{
+  border-radius: 16px 0 0 16px;
+}
+.text-input:focus{
+  outline: 1px solid var(--color-text-muted);
+  padding: 0 18px;
+  outline-offset: -6px;
+}
+.add{
+  flex-basis: 100px;
+  border: 0;
+  background-color: var(--color-button-bg);
+  color: var(--color-bg);
+  font-size: 20px;
+  transition: .3s ease;
+}
+.add:hover{
+  background-color: var(--color-button-hover-bg);
+  font-size: 32px;
+}
+.add:active{
+    font-size: 16px;
+}
+
+.void{
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline;
+}
+.list-block{
+  width: 100%;
+  height: 40px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.list{
+  overflow: auto;
+  height: 200px;
+}
+.list-text{
+  padding: 10px 10px;
+  font-size: 24px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.complete-list p{
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+.butt-block{
+  display: flex;
+  height: 100%;
+  margin: 0;
+}
+.del, .complete{
+  display: block;
+  width: 50px;
+  flex-basis: 50px;
+  font-size: 30px;
+  transition: .3s ease;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: .0.3s linear;
+}
+.del:hover{
+  background-color: var(--color-delete-hover-bg);
+  color: var(--color-delete-hover-text);
+  font-size: 25px;
+}
+.complete:hover{
+  background-color: var(--color-button-active-bg);
+  color: var(--color-delete-hover-text);
+  font-size: 25px;
+}
+.del:active, .complete:active{
+    font-size: 18px;
+}
+.btd-del-all{
+  border: 0;
+  background-color: var(--color-text);
+  padding: 12px 18px;
+  color: var(--color-bg);
+  font-size: 28px;
+  transition: .3s ease;
+  border-radius: 8px;
+}
+.btd-del-all:hover{
+  background-color: var(--color-delete-hover-bg);
+  outline: 1px solid var(--color-shadow);
+  font-size: 32px;
+}
+
+.filters{
+    margin-bottom: 25px;
+}
+.title-filter {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.filter-btn {
+  border: 0;
+  background-color: var(--color-text);
+  padding: 4px 12px;
+  color: var(--color-bg);
+  font-size: 20px;
+  transition: .3s ease;
+  border-radius: 8px;
+}
+.filter-btn:hover{
+    font-size: 18px;
+    background-color: var(--color-button-hover-bg);
+} 
+.active-filter {
+  background-color: var(--color-button-active-bg);
+  color: var(--color-delete-hover-text);
+}  
+.change-color{
+  float: right;
+  margin-right: 150px;
+  display: inline-block;
+  border: 0;
+  background-color: var(--color-text);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: var(--color-bg);
+  font-size: 36px;
+  transition: .3s ease;
+  border-radius: 8px;
+}
+.change-color:hover{
+    font-size: 24px;
+    background-color: var(--color-button-hover-bg);
+} 

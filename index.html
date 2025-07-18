@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon_io/favicon-16x16.png">
+
+<link rel="manifest" href="/site.webmanifest">
+    <title>TO-DO List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="change-color" onclick="changeColor()">☯︎</button>
+    <div class="wrapper">
+        <h1 class="title">
+            To Do List
+        </h1>
+    <div class="text-block">
+      <input type="text" class="text-input" maxlength="41"><button class="add">✎</button>
+    </div>
+
+    <p class="void">the list is empty!</p>
+
+    <ul class="list">
+    </ul>
+
+  </div>
+
+  <div class="wrapper-2">
+    <div class="filters">
+        <h2 class="title-filter">Filter</h2>
+        <button data-filter="all" class="filter-btn active-btn">Show all</button>
+        <button data-filter="active" class="filter-btn">Show active</button>
+        <button data-filter="completed" class="filter-btn">Show completed</button>
+    </div>
+
+    <button class='btd-del-all' onclick='delAll()'>Delete all!</button>
+    
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
